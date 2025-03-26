@@ -1,13 +1,18 @@
 <?php
 
+//include ("EnemyGenerator.php");
+
 class Adventure
 {
-    public function StartAdventure(Knight1lv $character) {
+    public function ForestWay(Hero $character) {
         echo $character->Name . " start adventure\n";
         sleep(2);
         echo $character->Name . " meet monster!\n";
         sleep(2);
-        $fight = $this->FightTroll1lv($character);
+        $Fight = new Fight();
+        $GenerateEnemy = new EnemyGenerator();
+        $firstEnemy = $GenerateEnemy->GenerateOneEnemy();
+        $fight = $Fight->Fight($character, $firstEnemy);
         sleep(2);
         if(!$fight) {
             echo "Game Over\n";
@@ -19,13 +24,13 @@ class Adventure
         sleep(2);
         echo $character->Name . " meet monster!\n";
         sleep(2);
-        $fight = $this->FightWitch1lv($character);
+        $secondEnemy = $GenerateEnemy->GenerateOneEnemy();
+        $fight = $Fight->Fight($character, $secondEnemy);
         sleep(2);
         if(!$fight) {
             echo "Game Over\n";
         }
         else {
-            //sleep(2);
             echo $character->Name . " continues his way\n";
             sleep(2);
             echo $character->Name . " found a heal potion\n";
@@ -36,7 +41,9 @@ class Adventure
             $healPotion->UsePotion($character);
             sleep(2);
             echo $character->Name . " meet monster!\n";
-            $fight = $this->FightTroll2lv($character);
+            sleep(2);
+            $thirdEnemy = $GenerateEnemy->GenerateOneEnemy();
+            $fight = $Fight->Fight($character, $thirdEnemy);
             sleep(2);
             if(!$fight) {
                 echo "Game Over\n";
@@ -47,7 +54,9 @@ class Adventure
                 echo $character->Name . " continues his way\n";
                 sleep(2);
                 echo $character->Name . " meet monster!\n";
-                $fight = $this->FightWitch2lv($character);
+                sleep(2);
+                $fourEnemy = $GenerateEnemy->GenerateOneEnemy();
+                $fight = $Fight->Fight($character, $fourEnemy);
                 sleep(2);
                 if(!$fight) {
                     echo "Game Over\n";
@@ -59,68 +68,4 @@ class Adventure
         }
         }
     }
-
-    public function FightTroll1lv($character) : bool
-    {
-        $troll = new Troll1lv("Troll");
-        do {$character->Attack($troll);
-            sleep(1);
-            $troll->Attack($character);
-            sleep(1);
-        } while ($troll->IsAlive == true && $character->IsAlive == true);
-        if($character->IsAlive) {
-            return true;
-        }
-        else {
-            return false;
-        }
-    }
-
-    public function FightTroll2lv($character) : bool
-    {
-        $troll = new Troll2lv("Big Troll");
-        do {$character->Attack($troll);
-            sleep(1);
-            $troll->Attack($character);
-            sleep(1);
-        } while ($troll->IsAlive == true && $character->IsAlive == true);
-        if($character->IsAlive) {
-            return true;
-        }
-        else {
-            return false;
-        }
-    }
-
-    public function FightWitch1lv($character) : bool
-    {
-        $witch = new Witch1lv("Witch");
-        do {$character->Attack($witch);
-            sleep(1);
-            $witch->Attack($character);
-            sleep(1);
-        } while ($witch->IsAlive == true && $character->IsAlive == true);
-        if($character->IsAlive) {
-            return true;
-        }
-        else {
-            return false;
-        }
-    }    
-
-    public function FightWitch2lv($character) : bool
-    {
-        $witch = new Witch2lv("Witch");
-        do {$character->Attack($witch);
-            sleep(1);
-            $witch->Attack($character);
-            sleep(1);
-        } while ($witch->IsAlive == true && $character->IsAlive == true);
-        if($character->IsAlive) {
-            return true;
-        }
-        else {
-            return false;
-        }
-    }    
 }

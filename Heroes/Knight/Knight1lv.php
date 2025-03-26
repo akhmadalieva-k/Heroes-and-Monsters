@@ -5,13 +5,13 @@ class Knight1lv extends Knight
     public function __construct($name)
     {
         $this->Name = $name;
-        $this->MaxHP = 10;
+        $this->MaxHP = 15;
         $this->CurrentHP = $this->MaxHP;
-        $this->Shield = 3;
-        $this->Attack = 5;
+        $this->Shield = 6;
+        $this->Attack = 10;
         $this->IsAlive = true;
         $this->Hit = 7;
-        $this->Point = 5;
+        $this->Point = 0;
     }
 
     public function LevelUp($name)

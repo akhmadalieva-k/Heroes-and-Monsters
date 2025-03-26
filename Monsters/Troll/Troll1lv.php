@@ -1,15 +1,16 @@
 <?php
 
-class Witch2lv extends Witch
+class Troll1lv extends Troll
 {
     public function __construct($name)
     {
         $this->Name = $name;
-        $this->MaxHP = 19;
+        $this->MaxHP = 13;
         $this->CurrentHP = $this->MaxHP;
-        $this->Shield = 3;
-        $this->Attack = 18;
+        $this->Shield = 6;
+        $this->Attack = 10;
         $this->IsAlive = true;
-        $this->Hit = 6;
+        $this->Hit = 7;
     }
+
 }

@@ -1,12 +1,25 @@
 <?php
 
 include("Character.php");
-include("Heroes.php");
-include("Hero.php");
-include("Monster.php");
 include("Adventure.php");
-include("Item.php");
+include("Items/Item.php");
+include("EnemyGenerator.php");
+include("Fight.php");
 
-$Arthur = new Knight1lv("Arthur");
-$adv = new Adventure;
-$adv->StartAdventure($Arthur);
+class Handler
+{
+    public function StartForestWay(Heroes $hero, string $name)
+    {
+        $adventure = new Adventure;
+        switch($hero) {
+            case Heroes::Knight:
+                $character = new Knight1lv($name);
+                $adventure->ForestWay($character);
+                break;
+            case Heroes::Wizard:
+                $character = new Wizard1lv($name);
+                $adventure->ForestWay($character);
+                break;
+        }
+    }
+}

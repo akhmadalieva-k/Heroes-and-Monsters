@@ -1,5 +1,9 @@
 <?php
 
+include("Heroes/Heroes.php");
+include("Heroes/Hero.php");
+include("Monsters/Monster.php");
+
 abstract class Character
 {
     public string $Name;
@@ -11,7 +15,7 @@ abstract class Character
     protected int $Hit;
     protected int $Point = 0;
 
-    public function Attack(Object $enemy) : Void
+    public function Attack($enemy) : Void
     {
         if($this->IsAlive) {
             $hit = rand(1,10);
@@ -42,4 +46,6 @@ abstract class Character
         }
         echo $this->Name . " heal " . $HPpoint . " point\n";
     }
+
+    public function LevelUp($name){}
 }

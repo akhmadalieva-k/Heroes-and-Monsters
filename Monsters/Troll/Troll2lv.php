@@ -5,11 +5,11 @@ class Troll2lv extends Troll
     public function __construct($name)
     {
         $this->Name = $name;
-        $this->MaxHP = 15;
+        $this->MaxHP = 17;
         $this->CurrentHP = $this->MaxHP;
-        $this->Shield = 4;
-        $this->Attack = 8;
+        $this->Shield = 8;
+        $this->Attack = 12;
         $this->IsAlive = true;
-        $this->Hit = 8;
+        $this->Hit = 6;
     }
 }
