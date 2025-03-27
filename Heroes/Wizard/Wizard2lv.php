@@ -18,7 +18,8 @@ class Wizard2lv extends Wizard
     {
         if($this->Point >=1) {
             $Character = new Wizard3lv($name);
-            $Character->Point = $this->Point - 1;
+            $Character->Point = $this->Point - 2;
+            $Character->Bag = $this->Bag;
             echo "level up!\n";
             return $Character;
         }

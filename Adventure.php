@@ -31,14 +31,15 @@ class Adventure
             echo "Game Over\n";
         }
         else {
+            $Camp = new Camp();
+            $Camp->SetUpCamp($character);
+            sleep(2);
             echo $character->Name . " continues his way\n";
             sleep(2);
             echo $character->Name . " found a heal potion\n";
-            $healPotion = new HealPotion("heal", 10);
+            $healPotion = new HealPotion("heal potion", 10);
             sleep(2);
-            echo $character->Name . " use heal potion\n";
-            sleep(2);
-            $healPotion->UsePotion($character);
+            $character->Bag->HealPotion = $healPotion;
             sleep(2);
             echo $character->Name . " meet monster!\n";
             sleep(2);

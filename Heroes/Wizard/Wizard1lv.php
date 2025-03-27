@@ -12,6 +12,7 @@ class Wizard1lv extends Wizard
         $this->IsAlive = true;
         $this->Hit = 7;
         $this->Point = 0;
+        $this->Bag = new Inventory(5);
     }
 
     public function LevelUp($name)
@@ -19,6 +20,7 @@ class Wizard1lv extends Wizard
         if($this->Point >=1) {
             $Character = new Wizard2lv($name);
             $Character->Point = $this->Point - 1;
+            $Character->Bag = $this->Bag;
             echo "level up!\n";
             return $Character;
         }

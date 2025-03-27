@@ -6,11 +6,12 @@ class HealPotion extends Potion
 
     public function __construct(string $name, int $heal)
     {
-        $this->PotionName = $name;
+        $this->Name = $name;
         $this->Heal = $heal;
+        $this->Size = 1;
     }
 
-    public function UsePotion(object $character) {
+    public function UsePotion(Character $character) {
         $character->AddHP($this->Heal);
     }
 }

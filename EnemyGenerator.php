@@ -1,9 +1,5 @@
 <?php
 
-// include("Character.php");
-// include("Monster.php");
-
-
 class EnemyGenerator
 {
     public array $Enemy = [];

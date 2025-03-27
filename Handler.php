@@ -5,6 +5,8 @@ include("Adventure.php");
 include("Items/Item.php");
 include("EnemyGenerator.php");
 include("Fight.php");
+include("Camp.php");
+include("Inventory.php");
 
 class Handler
 {

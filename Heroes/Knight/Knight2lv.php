@@ -18,6 +18,7 @@ class Knight2lv extends Knight
         if($this->Point >=1) {
             $Character = new Knight3lv($name);
             $Character->Point = $this->Point - 2;
+            $Character->Bag = $this->Bag;
             echo "level up!\n";
             return $Character;
         }

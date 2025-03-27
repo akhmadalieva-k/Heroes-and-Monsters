@@ -38,13 +38,24 @@ abstract class Character
         }
     }
 
-    public function AddHP(int $HPpoint) {
+    public function AddHP(int $HPpoint) : void
+    {
         $this->CurrentHP += $HPpoint;
         //$healing = $HPpoint;
         if($this->CurrentHP > $this->MaxHP) {
             $this->CurrentHP = $this->MaxHP;
         }
         echo $this->Name . " heal " . $HPpoint . " point\n";
+    }
+
+    public function AddHPAfterRest()
+    {
+        $this->CurrentHP = $this->MaxHP;
+    }
+
+    public function AddProtection(int $protection) {
+        $this->Shield += $protection;
+        echo "protection increased by " . $protection . "\n";
     }
 
     public function LevelUp($name){}
