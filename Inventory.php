@@ -1,10 +1,10 @@
 <?php
-include("Interfaces.php");
 
-class Inventory implements ISet
+class Inventory
 {
     protected int $BagSize;
     protected int $CurrentSize;
+    public array $Items = [];
 
     public function __construct(int $bagSize)
     {
@@ -12,15 +12,14 @@ class Inventory implements ISet
         $this->CurrentSize = $bagSize;
     }
 
-    public function __set(string $name, Item $value)
+    public function AddItemToInventory(Item $item) : void
     {
-        if($value->Size <= $this->CurrentSize) {
-        $this->$name = $value;
-        $this->CurrentSize -= $value->Size;
-        echo $value->Name . " added to inventory\n";
+        if(count($this->Items) == $this->BagSize) {
+            echo "full bag. unable to add item\n";
         }
         else {
-            echo "full bag, can`t add " . $value->Name . " to inventory\n";
+            $this->Items[] = $item;
+            echo $item->Name . " added to inventory\n";
         }
     }
 }

@@ -25,7 +25,7 @@ class EnemyGenerator
         }
     }
 
-    public function GenerateOneEnemy()
+    public function GenerateOneEnemy()  // : Monster не работает :(
     {
             $rand = rand(1, 4);
             switch ($rand) {

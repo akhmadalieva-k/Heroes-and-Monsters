@@ -1,15 +1,21 @@
 <?php
 
+include("Attack.php");
+include("EnemyGenerator.php");
+
 class Fight
 {
-    public function Fight(Hero $character, Monster $enemy) : bool
+    public function Fight(Hero $hero) : bool
     {
-        do {$character->Attack($enemy);
+        $enemy = new EnemyGenerator();
+        $monster = $enemy->GenerateOneEnemy();
+        $attack = new Attack;
+        do {$attack->Attack($hero, $monster);
             sleep(1);
-            $enemy->Attack($character);
+            $attack->Attack($monster, $hero);
             sleep(1);
-        } while ($enemy->IsAlive == true && $character->IsAlive == true);
-        if($character->IsAlive) {
+        } while ($monster->IsAlive == true && $hero->IsAlive == true);
+        if($hero->IsAlive) {
             return true;
         }
         else {

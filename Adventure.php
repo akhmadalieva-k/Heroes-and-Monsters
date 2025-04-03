@@ -1,72 +1,43 @@
 <?php
 
-//include ("EnemyGenerator.php");
+include("Event.php");
 
 class Adventure
 {
-    public function ForestWay(Hero $character) {
-        echo $character->Name . " start adventure\n";
+    public function ForestWay(Hero $hero) : void
+    {
+        $this->StartMessage($hero);
+        $event = new Event();
+        $event->FightEvent($hero);
+        $hero = $hero->LevelUp($hero);
+
+        $this->ContinueMessage($hero);
+        $event->RandEvent($hero);
+        $this->ContinueMessage($hero);
+        $event->FightEvent($hero);
+        $hero = $hero->LevelUp($hero);
+
+        $this->ContinueMessage($hero);
+        $event->RandEvent($hero);
+        $this->ContinueMessage($hero);
+        $event->FightEvent($hero);
+        $this->HappyEndMessage($hero);
+    }
+
+    private function StartMessage(Hero $hero) : void
+    {
+        echo $hero->Name . " start adventure\n";
         sleep(2);
-        echo $character->Name . " meet monster!\n";
+    }
+
+    private function ContinueMessage(Hero $hero) : void
+    {
+        echo $hero->Name . " continues his way\n";
         sleep(2);
-        $Fight = new Fight();
-        $GenerateEnemy = new EnemyGenerator();
-        $firstEnemy = $GenerateEnemy->GenerateOneEnemy();
-        $fight = $Fight->Fight($character, $firstEnemy);
-        sleep(2);
-        if(!$fight) {
-            echo "Game Over\n";
-        }
-        else {
-        $character = $character->LevelUp($character->Name);
-        sleep(2);
-        echo $character->Name . " continues his way\n";
-        sleep(2);
-        echo $character->Name . " meet monster!\n";
-        sleep(2);
-        $secondEnemy = $GenerateEnemy->GenerateOneEnemy();
-        $fight = $Fight->Fight($character, $secondEnemy);
-        sleep(2);
-        if(!$fight) {
-            echo "Game Over\n";
-        }
-        else {
-            $Camp = new Camp();
-            $Camp->SetUpCamp($character);
-            sleep(2);
-            echo $character->Name . " continues his way\n";
-            sleep(2);
-            echo $character->Name . " found a heal potion\n";
-            $healPotion = new HealPotion("heal potion", 10);
-            sleep(2);
-            $character->Bag->HealPotion = $healPotion;
-            sleep(2);
-            echo $character->Name . " meet monster!\n";
-            sleep(2);
-            $thirdEnemy = $GenerateEnemy->GenerateOneEnemy();
-            $fight = $Fight->Fight($character, $thirdEnemy);
-            sleep(2);
-            if(!$fight) {
-                echo "Game Over\n";
-            }
-            else {
-                $character = $character->LevelUp($character->Name);
-                sleep(2);
-                echo $character->Name . " continues his way\n";
-                sleep(2);
-                echo $character->Name . " meet monster!\n";
-                sleep(2);
-                $fourEnemy = $GenerateEnemy->GenerateOneEnemy();
-                $fight = $Fight->Fight($character, $fourEnemy);
-                sleep(2);
-                if(!$fight) {
-                    echo "Game Over\n";
-                }
-                else {
-                    echo $character->Name . " successfully completed his adventure!\n";
-                }
-            }
-        }
-        }
+    }
+
+    private function HappyEndMessage(Hero $hero) : void
+    {
+        echo $hero->Name . " successfully completed his adventure!\n";
     }
 }

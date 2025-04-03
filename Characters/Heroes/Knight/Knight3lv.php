@@ -1,6 +1,6 @@
 <?php
 
-class Knight3lv extends Knight
+class Knight3lv extends Knight2lv
 {
     public function __construct($name)
     {
@@ -11,5 +11,9 @@ class Knight3lv extends Knight
         $this->Attack = 12;
         $this->IsAlive = true;
         $this->Hit = 7;
+    }
+
+    public function LevelUp(Hero $hero) : Hero {
+        return $hero;
     }
 }

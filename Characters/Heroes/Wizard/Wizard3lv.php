@@ -13,4 +13,9 @@ class Wizard3lv extends Wizard
         $this->Hit = 7;
         $this->Point = 0;
     }
+
+    public function LevelUp(Hero $hero) : Hero 
+    {
+        return $hero;
+    }
 }

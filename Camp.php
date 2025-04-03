@@ -2,7 +2,7 @@
 
 class Camp
 {
-    public function SetUpCamp(Hero $character)
+    public function SetUpCamp(Hero $character) : void
     {
         echo $character->Name . " stopped for a rest\n";
         sleep(2);
