@@ -1,11 +1,9 @@
 <?php
 
-include("Characters/Character.php");
-include("Adventure.php");
-include("Items/Item.php");
-include("Fight.php");
-include("Camp.php");
-include("Inventory.php");
+use Characters\Heroes\Heroes;
+use Characters\Heroes\Knight\Knight1lv;
+use Characters\Heroes\Wizard\Wizard1lv;
+use Events\Adventure;
 
 class Handler
 {

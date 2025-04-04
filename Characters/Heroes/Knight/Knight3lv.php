@@ -1,5 +1,9 @@
 <?php
 
+namespace Characters\Heroes\Knight;
+
+use Characters\Heroes\Hero;
+
 class Knight3lv extends Knight2lv
 {
     public function __construct($name)

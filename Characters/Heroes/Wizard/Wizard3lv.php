@@ -1,5 +1,9 @@
 <?php
 
+namespace Characters\Heroes\Wizard;
+
+use Characters\Heroes\Hero;
+
 class Wizard3lv extends Wizard
 {
     public function __construct($name)

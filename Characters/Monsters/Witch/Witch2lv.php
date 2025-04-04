@@ -1,5 +1,9 @@
 <?php
 
+namespace Characters\Monsters\Witch;
+
+use Characters\Monsters\Witch\Witch;
+
 class Witch2lv extends Witch
 {
     public function __construct($name)

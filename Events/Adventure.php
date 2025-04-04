@@ -1,6 +1,9 @@
 <?php
 
-include("Event.php");
+namespace Events;
+
+use Characters\Heroes\Hero;
+use Events\Event;
 
 class Adventure
 {

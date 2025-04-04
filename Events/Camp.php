@@ -1,5 +1,9 @@
 <?php
 
+namespace Events;
+
+use Characters\Heroes\Hero;
+
 class Camp
 {
     public function SetUpCamp(Hero $character) : void

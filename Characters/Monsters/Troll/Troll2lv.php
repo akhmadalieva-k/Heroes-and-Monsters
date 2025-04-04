@@ -1,5 +1,9 @@
 <?php
 
+namespace Characters\Monsters\Troll;
+
+use Characters\Monsters\Troll\Troll;
+
 class Troll2lv extends Troll
 {
     public function __construct($name)

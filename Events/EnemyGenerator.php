@@ -1,5 +1,12 @@
 <?php
 
+namespace Events;
+
+use Characters\Monsters\Troll\Troll1lv;
+use Characters\Monsters\Troll\Troll2lv;
+use Characters\Monsters\Witch\Witch1lv;
+use Characters\Monsters\Witch\Witch2lv;
+
 class EnemyGenerator
 {
     public array $Enemy = [];

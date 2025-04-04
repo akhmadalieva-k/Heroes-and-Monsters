@@ -1,7 +1,10 @@
 <?php
 
-include("Attack.php");
-include("EnemyGenerator.php");
+namespace Events;
+
+use Characters\Heroes\Hero;
+use Events\EnemyGenerator;
+use Events\Attack;
 
 class Fight
 {

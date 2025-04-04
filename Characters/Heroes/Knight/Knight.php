@@ -1,8 +1,9 @@
 <?php
 
-include("Knight1lv.php");
-include("Knight2lv.php");
-include("Knight3lv.php");
+namespace Characters\Heroes\Knight;
+
+use Characters\Heroes\Hero;
+use Characters\Heroes\Heroes;
 
 abstract class Knight extends Hero
 {

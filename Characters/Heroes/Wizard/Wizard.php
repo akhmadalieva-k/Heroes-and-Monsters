@@ -1,8 +1,9 @@
 <?php
 
-include("Wizard1lv.php");
-include("Wizard2lv.php");
-include("Wizard3lv.php");
+namespace Characters\Heroes\Wizard;
+
+use Characters\Heroes\Hero;
+use Characters\Heroes\Heroes;
 
 abstract class Wizard extends Hero
 {

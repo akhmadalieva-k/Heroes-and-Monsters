@@ -1,7 +1,8 @@
 <?php
 
-include("HealPotion.php");
-include("ProtectPotion.php");
+namespace Items\Potions;
+
+use Items\Item;
 
 class Potion extends Item
 {

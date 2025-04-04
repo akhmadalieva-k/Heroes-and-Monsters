@@ -1,6 +1,6 @@
 <?php
 
-include("Potions/Potion.php");
+namespace Items;
 
 abstract class Item
 {

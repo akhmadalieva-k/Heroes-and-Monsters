@@ -1,5 +1,9 @@
 <?php
 
+namespace Events;
+
+use Characters\Character;
+
 class Attack
 {
     public function Attack(Character $attacker, Character $attacked) : void

@@ -1,5 +1,7 @@
 <?php
 
+use Items\Item;
+
 class Inventory
 {
     protected int $BagSize;

@@ -1,8 +1,6 @@
 <?php
 
-include("Heroes/Heroes.php");
-include("Heroes/Hero.php");
-include("Monsters/Monster.php");
+namespace Characters;
 
 abstract class Character
 {

@@ -1,5 +1,13 @@
 <?php
 
+namespace Events;
+
+use Characters\Heroes\Hero;
+use Events\Camp;
+use Events\Fight;
+use Items\Potions\HealPotion;
+use Items\Potions\ProtectPotion;
+
 class Event
 {
     public function RandEvent(Hero $hero) : void

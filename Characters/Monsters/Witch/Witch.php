@@ -1,7 +1,8 @@
 <?php
 
-include("Witch1lv.php");
-include("Witch2lv.php");
+namespace Characters\Monsters\Witch;
+
+use Characters\Monsters\Monster;
 
 abstract class Witch extends Monster
 {

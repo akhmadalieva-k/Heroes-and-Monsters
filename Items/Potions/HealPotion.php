@@ -1,5 +1,9 @@
 <?php
 
+namespace Items\Potions;
+
+use Items\Potions\Potion;
+
 class HealPotion extends Potion
 {
     public int $Heal;

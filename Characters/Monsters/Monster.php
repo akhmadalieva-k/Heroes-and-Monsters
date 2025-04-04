@@ -1,7 +1,8 @@
 <?php
 
-include("Troll/Troll.php");
-include("Witch/Witch.php");
+namespace Characters\Monsters;
+
+use Characters\Character;
 
 abstract class Monster extends Character
 {

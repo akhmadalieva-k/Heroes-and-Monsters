@@ -1,7 +1,12 @@
 <?php
 
-include("Knight/Knight.php");
-include("Wizard/Wizard.php");
+namespace Characters\Heroes;
+
+use Characters\Character;
+use Inventory;
+use Items\Item;
+use Items\Potions\HealPotion;
+use Items\Potions\ProtectPotion;
 
 abstract class Hero extends Character
 {
