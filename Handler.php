@@ -9,6 +9,9 @@ class Handler
 {
     static public function StartForestWay(Heroes $hero, string $name) : void
     {
+        if (trim($name) === "") {
+            throw new InvalidArgumentException("Имя не может быть пустым.");
+        }
         $adventure = new Adventure;
         switch($hero) {
             case Heroes::Knight:
