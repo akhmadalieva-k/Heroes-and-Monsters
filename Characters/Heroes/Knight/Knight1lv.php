@@ -2,12 +2,14 @@
 
 namespace Characters\Heroes\Knight;
 
+use AddLog;
 use Characters\Heroes\Knight\Knight;
 use Characters\Heroes\Hero;
 use Inventory;
 
 class Knight1lv extends Knight
 {
+    use AddLog;
     public function __construct($name)
     {
         $this->Name = $name;
@@ -28,6 +30,7 @@ class Knight1lv extends Knight
             $Character->Point = $this->Point - 1;
             $Character->Bag = $this->Bag;
             echo "level up!\n";
+            self::AddLog($hero->Name . " get 2 level\n");
             sleep(2);
             return $Character;
         }

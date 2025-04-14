@@ -4,12 +4,16 @@ require("Autoload.php");
 use Characters\Heroes\Heroes;
 
 try {
-Handler::StartForestWay(Heroes::Wizard, "");
+Handler::StartForestWay(Heroes::Wizard, "Albus");
 }
 catch(InvalidArgumentException $e) {
-    echo $e->getMessage();
+    $message = $e->getMessage();
+    Handler::AddErrorLog($message);
+    echo $message;
 }
 catch(Error $e) {
-    echo "something wrong: " . $e->getMessage();
+    $message = $e->getMessage();
+    Handler::AddErrorLog($message);
+    echo $message;
 }
 

@@ -2,10 +2,12 @@
 
 namespace Characters\Heroes\Knight;
 
+use AddLog;
 use Characters\Heroes\Hero;
 
 class Knight2lv extends Knight1lv
 {
+    use AddLog;
     public function __construct($name)
     {
         $this->Name = $name;
@@ -24,6 +26,7 @@ class Knight2lv extends Knight1lv
             $Character->Point = $this->Point - 2;
             $Character->Bag = $this->Bag;
             echo "level up!\n";
+            self::AddLog($hero->Name . " get 3 level\n");
             sleep(2);
             return $Character;
         }

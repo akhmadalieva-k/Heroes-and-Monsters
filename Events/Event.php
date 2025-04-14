@@ -5,6 +5,7 @@ namespace Events;
 use Characters\Heroes\Hero;
 use Events\Camp;
 use Events\Fight;
+use Handler;
 use Items\Potions\HealPotion;
 use Items\Potions\ProtectPotion;
 
@@ -24,6 +25,7 @@ class Event
 
                 break;
             case 2:
+                Handler::AddLog($hero->Name . " get heal potion\n");
                 echo $hero->Name . " found a heal potion\n";
                 $healPotion = new HealPotion("heal potion", 10);
                 sleep(2);
@@ -35,6 +37,7 @@ class Event
                 }
                 break;
             case 3:
+                Handler::AddLog($hero->Name . " get protect potion\n");
                 echo $hero->Name . " found a protect potion\n";
                 $protectPotion = new ProtectPotion("protect potion", 3);
                 sleep(2);
@@ -50,14 +53,19 @@ class Event
 
     public function FightEvent(Hero $hero) : void
     {
+        Handler::AddLog($hero->Name . " start fight event\n");
         echo $hero->Name . " meet monster!\n";
         sleep(2);
         $Fight = new Fight();
         $fight = $Fight->Fight($hero);
         sleep(2);
         if (!$fight) {
+            Handler::AddLog($hero->Name . " lost the fight. game over\n");
             echo "Game Over\n";
             exit;
+        }
+        else {
+            Handler::AddLog($hero->Name . " won the fight\n");
         }
     }
 }

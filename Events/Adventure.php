@@ -2,11 +2,14 @@
 
 namespace Events;
 
+use AddLog;
 use Characters\Heroes\Hero;
 use Events\Event;
 
 class Adventure
 {
+    use ShowMessage;
+
     public function ForestWay(Hero $hero) : void
     {
         $this->StartMessage($hero);
@@ -25,22 +28,5 @@ class Adventure
         $this->ContinueMessage($hero);
         $event->FightEvent($hero);
         $this->HappyEndMessage($hero);
-    }
-
-    private function StartMessage(Hero $hero) : void
-    {
-        echo $hero->Name . " start adventure\n";
-        sleep(2);
-    }
-
-    private function ContinueMessage(Hero $hero) : void
-    {
-        echo $hero->Name . " continues his way\n";
-        sleep(2);
-    }
-
-    private function HappyEndMessage(Hero $hero) : void
-    {
-        echo $hero->Name . " successfully completed his adventure!\n";
     }
 }
