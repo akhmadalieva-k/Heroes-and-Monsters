@@ -1,10 +1,31 @@
 
+2025.04.16 16:28:11 new game. create Wizard Albus
+2025.04.16 16:28:11 Message: Albus start adventure
+2025.04.16 16:28:13 create enemy Troll
+2025.04.16 16:28:13 Message: Albus meet monster Troll
+2025.04.16 16:28:15 Message: start fighting between Albus and Troll
+2025.04.16 16:28:17 Message: Albus hit miss
+2025.04.16 16:28:19 Message: Troll dealt 9 damage to Albus
+2025.04.16 16:28:21 Message: Albus dealt 8 damage to Troll
+2025.04.16 16:28:23 Message: Troll dealt 9 damage to Albus
+2025.04.16 16:28:25 Message: Troll won the fight! Albus dead
+2025.04.16 16:28:27 Message: Albus lost the fight. game Over
+2025.04.16 16:28:29 character dead. game over
 
-2025.04.14 18:43:21 new game. create Wizard
-
-2025.04.14 18:43:23 Albus start fight event
-
-2025.04.14 18:43:25 create enemy Troll
-
-2025.04.14 18:43:31 Albus lost the fight. game over
+2025.04.16 16:28:39 new game. create Knight Albus
+2025.04.16 16:28:39 Message: Albus start adventure
+2025.04.16 16:28:41 create enemy Forest Witch
+2025.04.16 16:28:41 Message: Albus meet monster Forest Witch
+2025.04.16 16:28:43 Message: start fighting between Albus and Forest Witch
+2025.04.16 16:28:45 Message: Albus hit miss
+2025.04.16 16:28:47 Message: Forest Witch dealt 14 damage to Albus
+2025.04.16 16:28:49 Message: Albus hit miss
+2025.04.16 16:28:51 Message: Forest Witch hit miss
+2025.04.16 16:28:53 Message: Albus hit miss
+2025.04.16 16:28:55 Message: Forest Witch hit miss
+2025.04.16 16:28:57 Message: Albus dealt 7 damage to Forest Witch
+2025.04.16 16:28:59 Message: Forest Witch dealt 14 damage to Albus
+2025.04.16 16:29:01 Message: Forest Witch won the fight! Albus dead
+2025.04.16 16:29:03 Message: Albus lost the fight. game Over
+2025.04.16 16:29:05 character dead. game over
 

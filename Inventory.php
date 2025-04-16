@@ -4,6 +4,8 @@ use Items\Item;
 
 class Inventory
 {
+    use ShowMessage;
+    
     protected int $BagSize;
     protected int $CurrentSize;
     public array $Items = [];
@@ -17,11 +19,11 @@ class Inventory
     public function AddItemToInventory(Item $item) : void
     {
         if(count($this->Items) == $this->BagSize) {
-            echo "full bag. unable to add item\n";
+            $this->ShowMessage("full bag. unable to add item");
         }
         else {
             $this->Items[] = $item;
-            echo $item->Name . " added to inventory\n";
+            $this->ShowMessage($item->Name . " added to inventory");
         }
     }
 }

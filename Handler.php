@@ -1,8 +1,9 @@
 <?php
 
+//use Characters\Heroes\Knight\DarkKnight;
 use Characters\Heroes\Heroes;
-use Characters\Heroes\Knight\Knight1lv;
-use Characters\Heroes\Wizard\Wizard1lv;
+use Characters\Heroes\Knight\DarkKnight;
+use Characters\Heroes\Wizard\DarkWizard;
 use Events\Adventure;
 
 class Handler
@@ -17,13 +18,13 @@ class Handler
         $adventure = new Adventure;
         switch($hero) {
             case Heroes::Knight:
-                self::AddLog("new game. create Knight " . $name . "\n");
-                $character = new Knight1lv($name);
+                self::AddLog("new game. create Knight " . $name);
+                $character = new DarkKnight($name);
                 $adventure->ForestWay($character);
                 break;
             case Heroes::Wizard:
-                self::AddLog("new game. create Wizard\n");
-                $character = new Wizard1lv($name);
+                self::AddLog("new game. create Wizard " . $name);
+                $character = new DarkWizard($name);
                 $adventure->ForestWay($character);
                 break;
         }

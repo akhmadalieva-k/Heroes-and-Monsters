@@ -3,8 +3,10 @@
 namespace Items\Potions;
 
 use Items\Item;
+use Characters\Heroes\Hero;
 
 class Potion extends Item
 {
-    // protected string $Name;
+    public function UseItem(Hero $hero) {
+    }
 }

@@ -1,28 +1,30 @@
 <?php
 
-namespace Events;
+namespace Events\FightEvent;
 
 use Characters\Character;
+use ShowMessage;
 
 class Attack
 {
+    use ShowMessage;
     public function Attack(Character $attacker, Character $attacked) : void
     {
         if ($attacker->IsAlive) {
             $hit = rand(1, 10);
             if ($hit > $attacker->Hit) {
-                echo $attacker->Name . " hit miss\n";
+                $this->ShowMessage($attacker->Name . " hit miss");
             } else {
                 $damage = $attacker->Attack - $attacked->Shield;
                 if($damage < 0) {
                     $damage = 0;
                 }
                 $attacked->CurrentHP = $attacked->CurrentHP - $damage;
-                echo $attacker->Name . " dealt " . $damage . " damage to " . $attacked->Name . "\n";
+                $this->ShowMessage($attacker->Name . " dealt " . $damage . " damage to " . $attacked->Name);
                 if ($attacked->CurrentHP <= 0) {
                     $attacked->IsAlive = false;
                     $attacker->Point += 1;
-                    echo $attacker->Name . " win!\n";
+                    $this->ShowMessage($attacker->Name . " won the fight! " . $attacked->Name . " dead");
                 }
             }
         }

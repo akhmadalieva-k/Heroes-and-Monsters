@@ -8,4 +8,5 @@ use Characters\Heroes\Heroes;
 abstract class Wizard extends Hero
 {
     protected Heroes $CharacterType = Heroes::Wizard;
+    protected int $Level;
 }

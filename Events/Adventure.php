@@ -2,9 +2,10 @@
 
 namespace Events;
 
-use AddLog;
 use Characters\Heroes\Hero;
-use Events\Event;
+use Events\RandEvent;
+use Events\FightEvent\FightOneMonster;
+use ShowMessage;
 
 class Adventure
 {
@@ -12,21 +13,22 @@ class Adventure
 
     public function ForestWay(Hero $hero) : void
     {
-        $this->StartMessage($hero);
-        $event = new Event();
-        $event->FightEvent($hero);
-        $hero = $hero->LevelUp($hero);
+        $event = new RandEvent();
+        $fight = new FightOneMonster;
+        $this->ShowMessage($hero->Name . " start adventure");
+        $fight->Fight($hero);
+        $hero->LevelUp();
 
-        $this->ContinueMessage($hero);
-        $event->RandEvent($hero);
-        $this->ContinueMessage($hero);
-        $event->FightEvent($hero);
-        $hero = $hero->LevelUp($hero);
+        $this->ShowMessage($hero->Name . " continues his way");
+        $event->GetRandEvent($hero);
+        $this->ShowMessage($hero->Name . " continues his way");
+        $fight->Fight($hero);
+        $hero->LevelUp();
 
-        $this->ContinueMessage($hero);
-        $event->RandEvent($hero);
-        $this->ContinueMessage($hero);
-        $event->FightEvent($hero);
-        $this->HappyEndMessage($hero);
+        $this->ShowMessage($hero->Name . " continues his way");
+        $event->GetRandEvent($hero);
+        $this->ShowMessage($hero->Name . " continues his way");
+        $event->GetRandEvent($hero);
+        $this->ShowMessage($hero->Name . " successfully completed his adventure!\n");
     }
 }
