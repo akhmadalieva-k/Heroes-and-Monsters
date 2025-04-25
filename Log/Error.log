@@ -10,3 +10,4 @@
 2025.04.15 10:52:55 Class "Characters\Heroes\Knight\Knight1lv" not found
 2025.04.15 10:54:08 Class "Characters\Heroes\DarkKnight\DarkKnight" not found
 2025.04.15 10:56:44 Events\Adventure::ContinueMessage(): Argument #1 ($hero) must be of type Characters\Heroes\Hero, null given, called in /home/karina/oop/heroes-and-monsters/Events/Adventure.php on line 20
+2025.04.25 18:52:04 Non-static method Handler::GetAdventure() cannot be called statically

@@ -1,17 +1,19 @@
 <?php
 
-namespace Events;
+namespace Events\Adventure;
 
 use Characters\Heroes\Hero;
+use Events\Adventure\Adventure;
 use Events\RandEvent;
 use Events\FightEvent\FightOneMonster;
+use Events\Adventure\IAdventure;
 use ShowMessage;
 
-class Adventure
+class ForestAdventure extends Adventure implements IAdventure
 {
     use ShowMessage;
 
-    public function ForestWay(Hero $hero) : void
+    public function StartAdventure(Hero $hero) : void
     {
         $event = new RandEvent();
         $fight = new FightOneMonster;
