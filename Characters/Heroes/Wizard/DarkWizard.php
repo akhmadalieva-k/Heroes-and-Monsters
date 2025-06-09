@@ -2,7 +2,6 @@
 
 namespace Characters\Heroes\Wizard;
 
-use AddLog;
 use Characters\Heroes\Wizard\Wizard;
 use Inventory;
 use ShowMessage;

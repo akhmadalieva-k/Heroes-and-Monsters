@@ -36,3 +36,4 @@ class Handler
         return new ForestAdventure();
     }
 }
+

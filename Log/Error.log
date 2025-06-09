@@ -1,5 +1,3 @@
-14:04:2025 17:06:58 Имя не может быть пустым.
-14:04:2025 17:08:10 Имя не может быть пустым.
 2025.04.14 17:08:42 Имя не может быть пустым.
 2025.04.14 17:08:59 Имя не может быть пустым.
 2025.04.14 17:23:47 Имя не может быть пустым.
@@ -11,3 +9,10 @@
 2025.04.15 10:54:08 Class "Characters\Heroes\DarkKnight\DarkKnight" not found
 2025.04.15 10:56:44 Events\Adventure::ContinueMessage(): Argument #1 ($hero) must be of type Characters\Heroes\Hero, null given, called in /home/karina/oop/heroes-and-monsters/Events/Adventure.php on line 20
 2025.04.25 18:52:04 Non-static method Handler::GetAdventure() cannot be called statically
+2025.04.29 00:19:58 Object of class Characters\Heroes\Knight\DarkKnight could not be converted to string
+2025.04.29 00:20:40 Object of class Characters\Heroes\Knight\DarkKnight could not be converted to string
+2025.04.29 01:18:59 Cannot instantiate abstract class Characters\Heroes\Hero
+2025.04.29 01:19:34 Cannot assign null to property Characters\Character::$Name of type string
+2025.04.29 01:20:27 Cannot assign null to property Characters\Character::$Name of type string
+2025.04.29 01:20:34 Database::GetHero(): Return value must be of type Characters\Heroes\Hero, none returned
+2025.06.09 17:03:33 Events\Adventure\ForestAdventure::StartAdventure(): Argument #1 ($hero) must be of type Characters\Heroes\Hero, null given, called in /home/karina/oop/heroes-and-monsters/Handler.php on line 27

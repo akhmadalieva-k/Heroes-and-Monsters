@@ -2,7 +2,6 @@
 
 namespace Characters\Heroes\Knight;
 
-use AddLog;
 use Characters\Heroes\Knight\Knight;
 use Inventory;
 use ShowMessage;

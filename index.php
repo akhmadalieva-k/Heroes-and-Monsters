@@ -4,7 +4,7 @@ require("Autoload.php");
 use Characters\Heroes\Heroes;
 
 try {
-    Handler::StartForestWay(Heroes::Knight, "Albus");
+    Handler::StartForestWay(Heroes::Knight, "Arthur");
 }
 catch(InvalidArgumentException $e) {
     $message = $e->getMessage();
@@ -16,4 +16,5 @@ catch(Error $e) {
     Handler::AddErrorLog($message);
     echo $message;
 }
+
 

@@ -17,7 +17,7 @@ class FindPotion extends FindItem
         $this->ShowMessage($hero->Name . " found a heal potion");
         $healPotion = new HealPotion("heal potion", 10);
         $hero->Bag->AddItemToInventory($healPotion);
-        $hero->UseItem($healPotion);
+        // $hero->UseItem($healPotion);
     }
 
     public function FindProtectPotion(Hero $hero)
@@ -25,6 +25,6 @@ class FindPotion extends FindItem
         $this->ShowMessage($hero->Name . " found a protect potion");
         $protectPotion = new ProtectPotion("protect potion", 3);
         $hero->Bag->AddItemToInventory($protectPotion);
-        $hero->UseItem($protectPotion);
+        // $hero->UseItem($protectPotion);
     }
 }

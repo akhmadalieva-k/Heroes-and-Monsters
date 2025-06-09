@@ -7,6 +7,7 @@ use Events\Adventure\Adventure;
 use Events\RandEvent;
 use Events\FightEvent\FightOneMonster;
 use Events\Adventure\IAdventure;
+use Database;
 use ShowMessage;
 
 class ForestAdventure extends Adventure implements IAdventure
@@ -33,4 +34,5 @@ class ForestAdventure extends Adventure implements IAdventure
         $event->GetRandEvent($hero);
         $this->ShowMessage($hero->Name . " successfully completed his adventure!\n");
     }
+
 }
